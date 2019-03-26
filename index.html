@@ -44,22 +44,22 @@
             <b>Update 20190326 0636EST</b><br>
             Just had to change some things in /etc/X11/xorg.conf - Per the guides above, in the "ServerLayout" for the screens, it had "HDMI" set as Screen 0.
             By telling it to set "UGA" as Screen 0 and setting HDMI as Screen 1, we now have the main task bar on our tiny touchscreen. 
-            That got the display to be primary but now the touchscreen calibration is off. We have to adjust the "Coordinate Transformation Matrix" again. 
-            Let's look at that:
-            We have a 24in monitor that I've set to have a static (static should make this stick across setups) resolution of 1280x720 and a 10in touchscreen with 1024x600.
+            That got the display to be primary but now the touchscreen calibration is off. We have to adjust the "Coordinate Transformation Matrix" again. <br><br>
+            Let's look at that:<br>
+            We have a 24in monitor that I've set to have a static (static should make this stick across setups) resolution of 1280x720 and a 10in touchscreen with 1024x600.<br>
             According to <a href="https://wiki.archlinux.org/index.php/Calibrating_Touchscreen">this helpful wiki entry</a> we need to calculate a matrix of c0 0 c1 0 c2 c3 0 0 1
-            using 
-            c0 = touch_area_width / total_width
-            c2 = touch_area_height / total_height
-            c1 = touch_area_x_offset / total_width
-            c3 = touch_area_y_offset / total_height
-            
-            For my setup:
-            c0 = 1024 / 2304 ~= 0.44444
-            c2 = 600 / 720 ~= 0.83
-            c1 = 1280 / 2304 ~= 0.55555
-            c3 = 0 / 720 = 0
-
+            using <br><br>
+            c0 = touch_area_width / total_width<br>
+            c2 = touch_area_height / total_height<br>
+            c1 = touch_area_x_offset / total_width<br>
+            c3 = touch_area_y_offset / total_height<br>
+            <br>
+            For my setup:<br>
+            c0 = 1024 / 2304 ~= 0.44444<br>
+            c2 = 600 / 720 ~= 0.83<br>
+            c1 = 1280 / 2304 ~= 0.55555<br>
+            c3 = 0 / 720 = 0<br>
+            <br>
             This got the calibration we needed. Onto implementing and changing up the MagicMirror itself!
         </p>
     </div>
