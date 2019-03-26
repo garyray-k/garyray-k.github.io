@@ -19,6 +19,29 @@
         </p>
     </div>
     <div>
+        <h2>MagicMirror and YNAB API</h2>
+        <h3>20190325 - 2036EST</h3>
+        <p>
+            Finally had some time at home today to just tinker. Broke out the <a href="https://www.mimomonitors.com/products/mimo-magic-touch">Magic Touch 10in Touchscreen</a>
+            and got it working with a <a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b/">Raspberry Pi 3</a>. Luckily, Mimo had an excellent 
+            <a href="https://www.mimomonitors.com/pages/using-our-usb-displays-with-the-raspberry-pi-3">guide</a> for setting up their monitors with a RPi3.
+
+            Followed along with this for a bit until I couldn't for the life of me persist the "Coordinate Transform Matrix" (needed to calibrate the
+            touchscreen input appropriately). I could run a command after boot and it worked fine but no persistence. After some Google Fu involving Linux
+            exorg and determining Device Vendor, I used <a href="https://unix.stackexchange.com/questions/58117/determine-xinput-device-manufacturer-and-model">this stackexchange</a> 
+            to get the answer I needed. 
+
+            Lo-and-behold! The touchscreen settings now persist after reboot.
+
+            The next step was to install MagicMirror on my RPi3. SUPER EASY, since the author put a <a href="https://github.com/MichMich/MagicMirror#raspberry-pi">RPi3 Section</a>
+            in his README.md. Got it installed and running but it only runs on the primary monitor (HDMI output) so I'll have to do some more tinkering later to
+            have it auto-boot onto my touchscreen display.
+
+            End goal is to have a Google calendar HUD for the family and use the <a href="https://api.youneedabudget.com/">YNAB API</a> to populate
+            some data regarding out family budget at a glance.
+        </p>
+    </div>
+    <div>
         <h2>Top Coder update and Ruby on Rails</h2>
         <h3>20190324 - 0541EST</h3>
         <p>
