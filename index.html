@@ -10,9 +10,47 @@
         <h2>A simple blog about technical things.</h2>
         <p>Some of my sites to check out:<br>
             <a href="https://github.com/garyray-k">GitHub</a>
+            <br>
             <a href="https://www.linkedin.com/in/garyraykrause">LinkedIn</a> <br>
             <a href="https://www.topcoder.com/members/grkrause">Top Coder Profile</a> <br>
         </p>
+    </div>
+    <div>
+        <h2>Ruby MiniTest and Running Bash in Docker</h2>
+        <h3>20190504 - 0618</h3>
+        <p>
+            Took on a Ruby issue from <a href="https://github.com/OperationCode/operationcode_backend">Operation Code's Backend</a> to do some url validation when creating/updating a listing in their Code Schools. The validation part was simple enough using some Regular Expression for the 'format' part of the model validation and ensuring the school was using HTTPS. The tricky part came when I had to go clean up the tests. The individual test I wrote for the validation worked fine but not a few other tests were broken from the change. Turns out, the FactoryGirl Faker they were using to mock data for testing was generating HTTP urls. Tests were throwing errors every time they created a new mock code school to test against. This was good, because that meant my validation was working, but then I had to go learn how to update the FactoryGirl so it would spit out HTTPS.
+        </p>
+        <p>
+            Before figuring out the FactoryGirl stuff, I wanted to see what was going on in the tests. However, in the Makefile for <i>make test</i>, it was using <i>docker-compose run ${RAILS_CONTAINER} bash -xc 'export RAILS_ENV=test && bundle exec rake db:test:prepare && bundle exec rake test && bundle exec rubocop'</i>.<br>
+            Let's break that down a bit:
+            <ul>
+                <li><i><b>docker-compose run ${RAILS_CONTAINER}</b> bash -xc 'export RAILS_ENV=test && bundle exec rake db:test:prepare && bundle exec rake test && bundle exec rubocop'</i><br><b>This tells docker that we're about to run a command in a new specified container</b></li><br>
+                <li><i>docker-compose run ${RAILS_CONTAINER} <b>bash -xc</b> 'export RAILS_ENV=test && bundle exec rake db:test:prepare && bundle exec rake test && bundle exec rubocop'</i><br><b>This allows you to run a bash command. The <i>x</i> switch tells it to output every command broken up by <i>&&</i> on it's own line and generally makes it cleaner (IMHO). The <i>c</i> switch tells bash that we're going to give it a string that is the command to be run.</b></li><br>
+                <li><i>docker-compose run ${RAILS_CONTAINER} bash -xc <b>'export RAILS_ENV=test && bundle exec rake db:test:prepare</b> && bundle exec rake test && bundle exec rubocop'</i><br><b>The first command sets an environment variable so Rails knows we're testing. The next rakes the DB with test data to make sure we have something to test against in the upcoming command.</b></li><br>
+                <li><i>docker-compose run ${RAILS_CONTAINER} bash -xc 'export RAILS_ENV=test && bundle exec rake db:test:prepare && <b>bundle exec rake test</b> && bundle exec rubocop'</i><br><b>Now we get to the actual test running. This is where I was hung up for a while trying to figure out verbose output to see which tests were throwing errors. I could have just searched the tests for <i>create(:code_school)</i> but that didn't dawn on me right away and I wanted to figure this bit out. First I tried <i>bundle exec rake test --verbose</i> to no avail.</b> <br>Then I dug into a number of things:
+                    <ul>
+                        <li>Wanted to ensure each bash command was run as I thought, thus the <i>-x</i> switch for bash. Understanding <i>docker-compose run</i> was also good to make sure things went well.</li>
+                        <li>Next I looked into MiniTest and how to make the <i>test</i> command verbose. But that led no where.</li>
+                        <li>It was actually the combination of <i>rake test</i> that was causing the hangout. It needed some special syntax to enable verbose output. Also along that line fo thinking, I researched how to run only one specific test file instead of the whole thing (<i>bundle exec rake test TEST=test/controllers/api/v1/code_schools_controller_test.rb</i>).</li>
+                    </ul></li><br>
+                <li><i>docker-compose run ${RAILS_CONTAINER} bash -xc 'export RAILS_ENV=test && bundle exec rake db:test:prepare && bundle exec rake test && <b>bundle exec rubocop</b>'</i><br><b>This last little but is just making sure that all the code formatting is consistent across the project. Very nice to have for someone working on this for the first time.</b></li>
+            </ul>
+        </p>
+        <p>
+            All said and done, it was about 18 lines of code and I wrote my first test, which failed, then passed, but broke other things, but then passed everything. As of this writing, the <a href="https://github.com/OperationCode/operationcode_backend/pull/509">PR</a> is approved and just awaiting merge. Fingers crossed and time to move onto the next project.
+        </p>
+        <p>As it stands right now my goals/ideas to work towards are:</p>
+        <ul>
+            <li><strike>Resolve URL validation issue for Operation Code</strike></li>
+            <li>Setup old tower as home media server</li>
+            <li>JavaScript30 (JS/HTML/CSS) - in progress still</li>
+            <li>LearnRubyTheHardWay using only keyboard - in progress</li>
+            <li>Finish Reading Clean Code by Bob Martin - in progress</li>
+            <li>Work on FactionC2 Module</li>
+            <li>Write a YNAB App for MagicMirror (Node.js/Electron)</li>
+            <li>Port my RadonTestManager to Ruby on Rails</li>
+        </ul>
     </div>
 
     <div>
