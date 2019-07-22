@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>GaryInBinary</title>
-    </head>
+
+<head>
+    <title>GaryInBinary</title>
+</head>
+
 <body>
     <h1>01100111 01100001 01110010 01111001</h1>
     <h1>Gary in Binary</h1>
@@ -11,10 +13,29 @@
         <p>Some of my sites to check out:<br>
             <a href="https://github.com/garyray-k">GitHub</a>
             <br>
-            <a href="https://www.linkedin.com/in/garyraykrause">LinkedIn</a> 
+            <a href="https://www.linkedin.com/in/garyraykrause">LinkedIn</a>
             <br>
-            <a href="https://www.topcoder.com/members/grkrause">Top Coder Profile</a> 
+            <a href="https://www.topcoder.com/members/grkrause">Top Coder Profile</a>
             <br>
+        </p>
+    </div>
+    <div>
+        <h2>A lot of SGO (stuff going on)</h2>
+        <h3>20190722 - 1630</h3>
+        <p>
+            I've been interning at <a href="https://sixgen.io">SIXGEN</a> for the past two months or so and things are going great.
+        </p>
+        <p>
+            The first few weeks, I was asked to research <a href="https://blog.cloudflare.com/esni/">Encrypted Server Name Indicator</a> and how it could be used in pentesting combined with C2 software. It was awesome to learn about, but way too new for my current skill level in C code and dissecting/understanding it. I did manage to take a <a href="https://github.com/sftcd/openssl">custom Openssl</a> and convert it to a <a href="https://medium.com/dtoebe/embed-other-binaries-in-golang-binary-3f613314884c">byte array in Go</a> and then compile. However, the byte array still relied on custom libraries that needed to be pre-isntalled so hit a dead end for now. Maybe once the protocol evolves or I learn C and then learn the openssl library, I'll revisit.
+        </p>
+        <p>
+            I was also sent to a <a href="https://www.blackbagtech.com/">BlackBag Tech</a> course where I learned the tool for two days. Awesome deep dive into forensics.
+        </p>
+        <p>
+            More recently, I've been working on a Ruby on Rails project. I started out getting my feet wet with helping one of the other devs combine three models into one and create a hierarchical structure within the unified model. Good learning to get back into the feel for RoR. Then I took a ticket of my own.... Thinking it would be easy, I grabbed a PDF generation ticket. Googled PDF gems and landed on <a href="http://prawnpdf.org/api-docs/2.0/">Prawn</a> which is fairly simple to use after reviewing the docs. <br> Little did I know the PDF is generated from the central object in our app. The object touches almost everything in the database somehow. And the relationships aren't straight forward and the naming doesn't necessarily match up with what the customer uses... needless to say, I'm understanding the reason <a href="https://en.wikipedia.org/wiki/Domain-driven_design">DDD</a> is so helpful. Luckily, this has really helped flesh out issues and flesh out my understanding of RoR and relational databases. It's also hammered home the usefulness of writing tests. You can't easily create a specifically formatted PDF all at once from a massive object. It's been a slow process of breaking down the parts and understanding each piece, then plugging that piece into the overarching shell to spit out something pretty.
+        </p>
+        <p>
+            As for my list, I finished reading about Kali but other things got waylaid in the move/new internship. Currently I'm focused on writing Pathfinder 2nd Edition rules in C#/.NET and beginning to study for <a href="https://www.offensive-security.com/information-security-certifications/oscp-offensive-security-certified-professional/">OSCP</a>.
         </p>
     </div>
     <div>
@@ -27,8 +48,8 @@
         </p>
         <p>
             Other random thoughts:<br>
-                &emsp; Kali Linux Revealed has a lot of good basic Linux stuff in it. I've cleared up a bit more on the file system layout with Linux and learned that you can setup a custom auto-install for Debian based Linux. Can't say that I have a use case now for a custom auto-install but it's good to know. <br>
-                &emsp; I had issues with running Kali-Live on my MSI because it has an NVIDIA card in it. Learned that you can throw Kali some extra options at the boot menu to modify the boot. When you get to the boot menu, you can press 'e' and it give you the commands being run to boot. To enable boot on my MSI, I had to change 'splash' to 'nouveau.modeset=0'. From my understanding, this has something to do with the power drawn by the GPU on boot. Either way it works, which has allowed me to turn an external 1TB SSD (using Kali-Live with persistence) into my portable Kali SSD. The goal will be setting up a Dev environment on it, but first I need to lock it down and configure it a bit more.
+            &emsp; Kali Linux Revealed has a lot of good basic Linux stuff in it. I've cleared up a bit more on the file system layout with Linux and learned that you can setup a custom auto-install for Debian based Linux. Can't say that I have a use case now for a custom auto-install but it's good to know. <br>
+            &emsp; I had issues with running Kali-Live on my MSI because it has an NVIDIA card in it. Learned that you can throw Kali some extra options at the boot menu to modify the boot. When you get to the boot menu, you can press 'e' and it give you the commands being run to boot. To enable boot on my MSI, I had to change 'splash' to 'nouveau.modeset=0'. From my understanding, this has something to do with the power drawn by the GPU on boot. Either way it works, which has allowed me to turn an external 1TB SSD (using Kali-Live with persistence) into my portable Kali SSD. The goal will be setting up a Dev environment on it, but first I need to lock it down and configure it a bit more.
         </p>
         <ul>
             <li>Write a YNAB App for MagicMirror (Node.js/Electron)</li>
@@ -41,7 +62,7 @@
             <li><strike>Setup old tower as home media server</strike></li>
             <li><strike>JavaScript30 (JS/HTML/CSS)</strike></li>
             <li><strike>Resolve URL validation issue for Operation Code</strike></li>
-        </ul>    
+        </ul>
     </div>
     <div>
         <h2>Ruby MiniTest and Running Bash in Docker</h2>
@@ -61,7 +82,8 @@
                         <li>Wanted to ensure each bash command was run as I thought, thus the <i>-x</i> switch for bash. Understanding <i>docker-compose run</i> was also good to make sure things went well.</li>
                         <li>Next I looked into MiniTest and how to make the <i>test</i> command verbose. But that led no where.</li>
                         <li>It was actually the combination of <i>rake test</i> that was causing the hangout. It needed some special syntax to enable verbose output. Also along that line fo thinking, I researched how to run only one specific test file instead of the whole thing (<i>bundle exec rake test TEST=test/controllers/api/v1/code_schools_controller_test.rb</i>).</li>
-                    </ul></li><br>
+                    </ul>
+                </li><br>
                 <li><i>docker-compose run ${RAILS_CONTAINER} bash -xc 'export RAILS_ENV=test && bundle exec rake db:test:prepare && bundle exec rake test && <b>bundle exec rubocop</b>'</i><br><b>This last little but is just making sure that all the code formatting is consistent across the project. Very nice to have for someone working on this for the first time.</b></li>
             </ul>
         </p>
@@ -88,7 +110,7 @@
             On a recommendation from some Slack friends I started Wes Bos's <a href="https://www.javascript30.com">JavaScript30</a> course. As of today, I've completed 5
             of the 30 courses and I'm feeling much better about Javascript. Having went through the <a href="https://watchandcode.com/">watchandcode</a>
             videos, these videos feel familiar and aren't too hard to follow along with. JS30 is also diving into CSS (something I've avoided learning) in an easy way.
-            I decided to start on some more JS since I'll be working with Node.js in my upcoming internship. 
+            I decided to start on some more JS since I'll be working with Node.js in my upcoming internship.
         </p>
         <p>As it stands right now my goals to work towards are:</p>
         <ul>
@@ -103,7 +125,7 @@
             definitely helps, especially when time is of the essence, but most of the time an immediate answer is not needed. In today's interconnected world, the answer
             is probably sitting in your pocket a browser click away. By using the right search engine and search string, one can usually find the answers they seek. This
             doesn't always apply to abstract or conceptual problems, but I think when seeking technical answers, it is crucial. This way of thinking also helps in retaining
-            "answers" but essentially creating an index for your brain. You only keep the information in there that can get you to the answer, not the answer itself. This 
+            "answers" but essentially creating an index for your brain. You only keep the information in there that can get you to the answer, not the answer itself. This
             has been extremely useful as I hop around to different programming languages. I don't need to remember the exact syntax for an "if" statement in Python, Ruby, C#,
             JS, etc. if I can just give it a quick Google. Same thing with some of the Object Oriented Programming concepts such as Inheritance. This does become hard though
             when beginning with a new framework that has unique syntax or structuring that's not similar to anything else. The idea that comes to mind currently is React.
@@ -121,12 +143,12 @@
         <p>
             It started with Python at the end of 2012. I began learning at the behest of my friend Justin, who told me it would be useful for parsing the massive CSV files we were dealing with.
             I began by browsing some books on Safari Books, and signing up for a Coursera course. It was fun and exciting and I learned some basics while making a game and scripting out
-            some workflows, but I didn't take it super serious and all my scripts were one file because getting them to work together was hard. 
+            some workflows, but I didn't take it super serious and all my scripts were one file because getting them to work together was hard.
         </p>
         <p>
             My dabbling in Python went on for some time before things got serious. I moved to a new job that still dealt with some data management but was much more technical (involving RF,
             Linux, wireless protocols, and a heap of other tech). This technical new job also had me linking up with a lot more technically minded people and attending some pretty awesome
-            tech courses. In and out of work, I was tinkering with networks and security which lead me to Kali Linux. Again, I was introduced but didn't take it too serious and I'd still say 
+            tech courses. In and out of work, I was tinkering with networks and security which lead me to Kali Linux. Again, I was introduced but didn't take it too serious and I'd still say
             I'm no pentesting expert, but I got a good taste of exploiting vulnerabilities starting 2014.
         </p>
         <p>
@@ -140,8 +162,8 @@
         <p>
             Now we come to 2019. I'm on the way out of the Navy and heading into my first real world job this summer. An internship with a cyber security firm that has some dev work and other projects.
             I'm excited to begin since the company seems to have projects relating to everything I'm interested in: Unity3D development, web development, and pentesting. I've also began attending Meetups
-            on a regular basis. They're FANTASTIC. Just showing up and listening to other people talk is super helpful for picking up on terms I'm unfamiliar with. I also think community is an important 
-            thing to be a part of. 
+            on a regular basis. They're FANTASTIC. Just showing up and listening to other people talk is super helpful for picking up on terms I'm unfamiliar with. I also think community is an important
+            thing to be a part of.
         </p>
     </div>
     <div>
@@ -150,16 +172,16 @@
         <p>
             Algorithms. Something you'd learn during your CS degree, which I don't currently have. Which was a good reason to register for a Top Coder
             challenge creating a dual-pivot quick sort using Ruby. Since I'm also studying Ruby (on Rails), it was a good way to kill two birds with one stone.
-            Learn an algorithm and also practice with a new language. 
+            Learn an algorithm and also practice with a new language.
         </p>
         <p>
             Learning the algorithm was the hard part. The Challenge Overview was:<br><br>
-            <i>The idea of dual pivot quick sort is to take two pivots, one in the left end of the array and the second, in the right end of the array. 
-            The left pivot must be less than or equal to the right pivot, so we swap them if necessary. 
-            Then, we begin partitioning the array into three parts: in the first part, all elements will be less than the left pivot, in the second 
-            part all elements will be greater or equal to the left pivot and also will be less than or equal to the right pivot, and in the third 
-            part all elements will be greater than the right pivot. Then, we shift the two pivots to their appropriate positions as we see in the 
-            below bar, and after that we begin quicksorting these three parts recursively, using this method.</i><br><br>
+            <i>The idea of dual pivot quick sort is to take two pivots, one in the left end of the array and the second, in the right end of the array.
+                The left pivot must be less than or equal to the right pivot, so we swap them if necessary.
+                Then, we begin partitioning the array into three parts: in the first part, all elements will be less than the left pivot, in the second
+                part all elements will be greater or equal to the left pivot and also will be less than or equal to the right pivot, and in the third
+                part all elements will be greater than the right pivot. Then, we shift the two pivots to their appropriate positions as we see in the
+                below bar, and after that we begin quicksorting these three parts recursively, using this method.</i><br><br>
             Which sounds easy enough. If you understand Ruby already. My first couple of tries resulted in a final array of arrays.
             Luckily they were all sorted arrays within the array but it still wouldn't work properly. I caved and googled dual-pivot quicksort
             and came across <a href="https://www.geeksforgeeks.org/dual-pivot-quicksort/">this article</a> which outlined the algorithm but using C.
@@ -168,8 +190,8 @@
         </p>
         <p>
             I won the challenge and had some good feedback from it. I used my code comments as a document of my own understanding of what was going on
-            which resulted in a whole lot of unnecessary comments. Cleaned them up but it'll be good to go back and reference at a later time when I go 
-            to study other algorithms. I also got in touch with one of the other entrants via a common Slack channel. After exchanging notes, his implementation was 
+            which resulted in a whole lot of unnecessary comments. Cleaned them up but it'll be good to go back and reference at a later time when I go
+            to study other algorithms. I also got in touch with one of the other entrants via a common Slack channel. After exchanging notes, his implementation was
             sooooo much cleaner and more "Ruby" than mine. It'll be another thing I reference when I look to write some quality Ruby code in the future.
         </p>
     </div>
@@ -178,12 +200,12 @@
         <h3>20190325 - 2036EST</h3>
         <p>
             Finally had some time at home today to just tinker. Broke out the <a href="https://www.mimomonitors.com/products/mimo-magic-touch">Magic Touch 10in Touchscreen</a>
-            and got it working with a <a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b/">Raspberry Pi 3</a>. Luckily, Mimo had an excellent 
+            and got it working with a <a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b/">Raspberry Pi 3</a>. Luckily, Mimo had an excellent
             <a href="https://www.mimomonitors.com/pages/using-our-usb-displays-with-the-raspberry-pi-3">guide</a> for setting up their monitors with a RPi3.
 
             Followed along with this for a bit until I couldn't for the life of me persist the "Coordinate Transformation Matrix" (needed to calibrate the
             touchscreen input appropriately). I could run a command after boot and it worked fine but no persistence. After some Google Fu involving Linux
-            exorg and determining Device Vendor, I used <a href="https://unix.stackexchange.com/questions/58117/determine-xinput-device-manufacturer-and-model">this stackexchange</a> 
+            exorg and determining Device Vendor, I used <a href="https://unix.stackexchange.com/questions/58117/determine-xinput-device-manufacturer-and-model">this stackexchange</a>
             to get the answer I needed.
 
             Lo-and-behold! The touchscreen settings now persist after reboot.
@@ -198,7 +220,7 @@
         <p>
             <b>Update 20190326 0636EST</b><br>
             Just had to change some things in /etc/X11/xorg.conf - Per the guides above, in the "ServerLayout" for the screens, it had "HDMI" set as Screen 0.
-            By telling it to set "UGA" as Screen 0 and setting HDMI as Screen 1, we now have the main task bar on our tiny touchscreen. 
+            By telling it to set "UGA" as Screen 0 and setting HDMI as Screen 1, we now have the main task bar on our tiny touchscreen.
             That got the display to be primary but now the touchscreen calibration is off. We have to adjust the "Coordinate Transformation Matrix" again. <br><br>
             Let's look at that:<br>
             We have a 24in monitor that I've set to have a static (static should make this stick across setups) resolution of 1280x720 and a 10in touchscreen with 1024x600.<br>
@@ -239,12 +261,12 @@
             So far so good, the MVC pattern that Rails uses is exactly what I learned when digging into the
             ASP.NET Core project/API that I built. Of course, it'll be good to actually dig into the 'V' part of
             that acronym since I only finished the 'MC' part of my project.
-            
+
             As nice and clean as .NET and C# is, Rails seems so much more friendly with the "rails console".
             So many things you can do from the console that make building out your models a breeze. Maybe I missed
             a tool for .NET that would give me similar functionality, but I enjoy the rails console.
-            
-            Then there is the easy to read language of Ruby. Since it's all designed to be human readable from a 
+
+            Then there is the easy to read language of Ruby. Since it's all designed to be human readable from a
             language standpoint, it's easy enough to pick up on what's happening by just reading the code.
             I think I'll recommend this to anyone that's got some programming experience but looking for a new language
             since it's easy to understand but you still need to understand programming concepts for it to make sense.
@@ -255,16 +277,16 @@
         <h2>garykrause.dev and Top Coder</h2>
         <p>
             I bought a few different .dev names in the recent release. Maybe you used one to get to this page? That would be neat! There was a lot of buzz in the different Slack channels
-            I'm in about the .dev namespace and I definitely jumped on that bandwagon. 
+            I'm in about the .dev namespace and I definitely jumped on that bandwagon.
         </p>
         <p>
-            Also just finished my first Top Coder challenge for the Veteran community. It's a <a href="https://github.com/garyray-k/breakoutRemix">Breakout Remix</a>. 
-            It was fun to make, I used some pre-generate GameObjects from a previous Unity3D tutorial and slapped some new scripts on them. The most challenging part was handling the Upgrades in the game. 
+            Also just finished my first Top Coder challenge for the Veteran community. It's a <a href="https://github.com/garyray-k/breakoutRemix">Breakout Remix</a>.
+            It was fun to make, I used some pre-generate GameObjects from a previous Unity3D tutorial and slapped some new scripts on them. The most challenging part was handling the Upgrades in the game.
             There was a lot of state management and manipulation to ensure upgrades weren't all over the place and that the gracefully entered and exited the game when appropriate.
             Maybe it will be my first Software Dev paycheck? That would be neat and would nicely justify and offset my domain name purchases, haha!
         </p>
         <p>
-            I stopped the React course to start doing Top Coder and probably won't get back to React for a while. Based on a future prospect, I'll be  
+            I stopped the React course to start doing Top Coder and probably won't get back to React for a while. Based on a future prospect, I'll be
             <a href="https://learnrubythehardway.org/book/">Learning Ruby the Hard Way</a>. Probably not as useful as learning React but we'll see.
         </p>
     </div>
@@ -290,10 +312,10 @@
         <p>
             Went to a DevOps meetup (<a href="http://meetu.ps/c/3Nt1V/BVzDM/f">Devops Columbia</a>) and listed to a good presentation
             about what "Serverless Functions" are. Turns out, they still use a server! But, that server isn't sitting there waiting to
-            run code. The code is sitting there waiting to be run. You pay by usage and can set various triggers based on anything from time to 
+            run code. The code is sitting there waiting to be run. You pay by usage and can set various triggers based on anything from time to
             file changes to Http messages. It seemed pretty cool. It seemed like I should have wrote my REST API as functions so it would be cheaper.
             But then again, I should probably get my API actually working with a Front-End before I go breakin.... err changing things.
-         </p>
+        </p>
     </div>
     <div>
         <h2>Bogus and Mocking Data</h2>
@@ -305,7 +327,7 @@
             Lorem Ipsum sentences or sentence, a username, an email, pick from a list, etc. etc. I'm really happy to have found this.
         </p>
         <p>
-            I did have to do some weird stuff in Program.cs because I'm calling two additional functions to populate the data. The 
+            I did have to do some weird stuff in Program.cs because I'm calling two additional functions to populate the data. The
             intent is to comment out or remove those two lines before sending this thing out into the wild.
         </p>
     </div>
@@ -318,11 +340,11 @@
             but I suppose that's because I've never done it.
         </p>
         <p>
-            On a long drive home I listened to a .NET Rocks podcast about Blazor and that got me thinking that I could just write the front 
-            end using Blazor and skip learning more JS. Not sure if that's the best idea but it's an idea for now. 
+            On a long drive home I listened to a .NET Rocks podcast about Blazor and that got me thinking that I could just write the front
+            end using Blazor and skip learning more JS. Not sure if that's the best idea but it's an idea for now.
         </p>
         <p>
-            This all led me to asking around int he Operation Code Slack channel about doing dev on a web-page. One thing led to another 
+            This all led me to asking around int he Operation Code Slack channel about doing dev on a web-page. One thing led to another
             and I don't know anything about making a web page. yet. Regardless of that, I did get some clarification on somethign within my API
             that I was clueless on. CORS. I learned that it basically tells a browser when to enable using data from a certain API. So if I
             tell my API to app.UseCors() but .WithOrigins("http://foo.com") then the browser will know to only use my API's data when working with foo.com
@@ -333,15 +355,16 @@
         <h3>20190213 - 0751EST</h3>
         <p>
             I recently was helping someone out in a Slack chat I'm part of (<a href="https://codingblocks.net">CodingBlockPodcast</a>) and while showing them my example Terminal ouptut
-            they commented on my 'repo' folder being in my Dropbox. After a bit more discussion, they enlightened me. Don't use Dropbox and Git source control 
-            or you'll end up saturating your Dropbox with all the various versions and branches of your code. This had never occurred to me so I dove deeper into 
+            they commented on my 'repo' folder being in my Dropbox. After a bit more discussion, they enlightened me. Don't use Dropbox and Git source control
+            or you'll end up saturating your Dropbox with all the various versions and branches of your code. This had never occurred to me so I dove deeper into
             the question. How do I move from one computer to the next and still keep my changes and such?? Git of course! My initial
-            reason to not use solely Git was not commiting nonsense as I move between computers, but my good friend on Slack pointed out 
+            reason to not use solely Git was not commiting nonsense as I move between computers, but my good friend on Slack pointed out
             I could just branch off 'master' into 'nonsense' and do what I please. Then rebase 'nonsense' into 'master' when I'm done.
             It blew my mind! I understand source control a bit more now and will also be jumping into the CLI for Git more.
         </p>
     </div>
 
-<p>I'm hosted with GitHub pages.</p>
+    <p>I'm hosted with GitHub pages.</p>
 </body>
+
 </html>
