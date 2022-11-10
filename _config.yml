@@ -30,6 +30,8 @@ github_username:  garyray-k
 
 # Build settings
 theme: minima
+  skin: dark
+  date_format: "%Y%m%d"
 plugins:
   - jekyll-feed
 
