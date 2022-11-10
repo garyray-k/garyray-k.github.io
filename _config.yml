@@ -21,15 +21,12 @@
 title: "Gary in Binary"
 email: garyraykrause@outlook.com 
 description: >- # this means to ignore newlines until "baseurl:"
-  A personal blog website with random musings and 
+  A personal blog website with random musings.
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://garykrause.dev" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: garyKrause_
 github_username:  garyray-k
 linkedin_username: garyray-k
-site:
-  author: "Gary R Krause"
-  email: garyraykrause@outlook.com
 
 # Build settings
 theme: minima
@@ -37,7 +34,10 @@ plugins:
   - jekyll-feed
 minima:
   skin: dark
-  date_format: '%Y%m%D'
+  date_format: '%Y%m%d'
+  site:
+    author: "Gary R Krause"
+    email: garyraykrause@outlook.com
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
