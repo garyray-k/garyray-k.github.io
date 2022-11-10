@@ -33,11 +33,11 @@ site:
 
 # Build settings
 theme: minima
-  skin: dark
-  date_format: '%Y%m%D'
 plugins:
   - jekyll-feed
-
+minima:
+  skin: dark
+  date_format: '%Y%m%D'
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
