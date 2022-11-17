@@ -1,7 +1,7 @@
 ---
-published: false
+published: true
 ---
-Today my first child is 10 months old! But you're not here for that. Let's talk Bogus</p>
+Today my first child is 10 months old! But you're not here for that. Let's talk Bogus
 
 I was going to manually go in and hand-jam a bunch of test SQL data for use while testing and demoing. But then I stumbled upon Bogus. Which is a lovely C# library for creating all kinds of random data but with intent. For instance, you can have it generate Lorem Ipsum sentences or sentence, a username, an email, pick from a list, etc. etc. I'm really happy to have found this.
 
