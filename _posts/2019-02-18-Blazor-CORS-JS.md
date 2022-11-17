@@ -1,8 +1,6 @@
 ---
-published: false
+published: true
 ---
-## 20190218 - Blazor, CORS, and JS
-
 I've been stalling a lot in building this front end for the API, but just wanted to muse a bit about what I've learned recently. I went through the 'Practical Javascript' @ [watchandcode.com](https://watchandcode.com) and learned a bit about JS. There's a lot more to it though. Really seems daunting but I suppose that's because I've never done it.
 
 On a long drive home I listened to a .NET Rocks podcast about Blazor and that got me thinking that I could just write the front end using Blazor and skip learning more JS. Not sure if that's the best idea but it's an idea for now.
