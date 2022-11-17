@@ -1,0 +1,6 @@
+---
+published: false
+---
+# 20190213 - Git Enlightenment via Slack
+
+I recently was helping someone out in a Slack chat I'm part of ([CodingBlockPodcast](https://codingblocks.net)) and while showing them my example Terminal ouptut they commented on my 'repo' folder being in my Dropbox. After a bit more discussion, they enlightened me. Don't use Dropbox and Git source control or you'll end up saturating your Dropbox with all the various versions and branches of your code. This had never occurred to me so I dove deeper into the question. How do I move from one computer to the next and still keep my changes and such?? Git of course! My initial reason to not use solely Git was not commiting nonsense as I move between computers, but my good friend on Slack pointed out I could just branch off 'master' into 'nonsense' and do what I please. Then rebase 'nonsense' into 'master' when I'm done. It blew my mind! I understand source control a bit more now and will also be jumping into the CLI for Git more.
