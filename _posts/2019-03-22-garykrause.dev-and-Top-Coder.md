@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 I bought a few different .dev names in the recent release. Maybe you used one to get to this page? That would be neat! There was a lot of buzz in the different Slack channels I'm in about the .dev namespace and I definitely jumped on that bandwagon.
 
