@@ -5,7 +5,7 @@ published: true
 
 Being sick is usually great, get to stay home from the day job and practice coding... unless you get the flu and your whole body aches. Anyway, I'm alive and well and on the tail end of the sickness started up a [https://www.packtpub.com/application-development/learn-go-3-hours-video"](Go tutorial) but promptly go distracted and began browsing the web.
 
-            However, Go seems like it's a nice language to use. I like that they take away all the flame war things about spacing and formatting of the code and just force their will on you. I imagine for some, that's a non-starter.
+However, Go seems like it's a nice language to use. I like that they take away all the flame war things about spacing and formatting of the code and just force their will on you. I imagine for some, that's a non-starter.
 
 ### Onto React! 
 
