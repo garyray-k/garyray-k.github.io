@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 ## 20190213 - Git Enlightenment via Slack
 
