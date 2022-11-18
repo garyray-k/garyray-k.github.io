@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 Took on a Ruby issue from [Operation Code's Backend](https://github.com/OperationCode/operationcode_backend) to do some url validation when creating/updating a listing in their Code Schools. The validation part was simple enough using some Regular Expression for the 'format' part of the model validation and ensuring the school was using HTTPS. The tricky part came when I had to go clean up the tests. The individual test I wrote for the validation worked fine but not a few other tests were broken from the change. Turns out, the FactoryGirl Faker they were using to mock data for testing was generating HTTP urls. Tests were throwing errors every time they created a new mock code school to test against. This was good, because that meant my validation was working, but then I had to go learn how to update the FactoryGirl so it would spit out HTTPS.
 
