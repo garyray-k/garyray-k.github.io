@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 Finally had some time at home today to just tinker. Broke out the [Magic Touch 10in Touchscreen](https://www.mimomonitors.com/products/mimo-magic-touch) and got it working with a [Raspberry Pi 3](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/). Luckily, Mimo had an excellent [guide](https://www.mimomonitors.com/pages/using-our-usb-displays-with-the-raspberry-pi-3) for setting up their monitors with a RPi3.
 
