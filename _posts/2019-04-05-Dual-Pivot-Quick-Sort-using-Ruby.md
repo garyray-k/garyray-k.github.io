@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 Algorithms. Something you'd learn during your CS degree, which I don't currently have. Which was a good reason to register for a Top Coder challenge creating a dual-pivot quick sort using Ruby. Since I'm also studying Ruby (on Rails), it was a good way to kill two birds with one stone. Learn an algorithm and also practice with a new language.
 
