@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 On a recommendation from some Slack friends I started Wes Bos's [JavaScript30](https://www.javascript30.com") course. As of today, I've completed 5 of the 30 courses and I'm feeling much better about Javascript. Having went through the [watchandcode](https://watchandcode.com/) videos, these videos feel familiar and aren't too hard to follow along with. JS30 is also diving into CSS (something I've avoided learning) in an easy way. I decided to start on some more JS since I'll be working with Node.js in my upcoming internship.
 
