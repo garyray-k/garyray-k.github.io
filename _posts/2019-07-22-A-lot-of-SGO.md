@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 ## SGO (stuff going on)
 
