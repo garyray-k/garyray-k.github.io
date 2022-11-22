@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 I've been recommending podcasts a lot to people wanting to learn software so I'm going to attempt to list my dev rotation here with a brief summary of what I get from the show.
 
