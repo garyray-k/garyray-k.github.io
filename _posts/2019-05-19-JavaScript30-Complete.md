@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 I'm about two weeks out from my internship with [SIXGEN](https://sixgen.io) and super excited to start working and learning in the civilian world.
 
