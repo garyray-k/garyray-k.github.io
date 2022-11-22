@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 What a journey! My 30th birthday has come and went and I don't have an app in the iOS App Store. Starting out I was very optimistic and began with Xamarin given my C# learnings and background. That went well enough until I came to the UI. I couldn't quick grasp how to componentize the UI so I could reuse bits and pieces and not just have a massive XML file that was my UI code. So I started poking around at other cross platform frameworks to use and came across React Native. Spending some time on PluralSight, I found the React concepts to be easy to digest and the best part was... TypeScript support! I could keep my strongly typed habits while using a flexible framework and language.
 
