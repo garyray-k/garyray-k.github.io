@@ -11,7 +11,7 @@ The story seemingly started a while back, but the trigger for the fallout could 
 
 ---
 
-![frustrated grim reaper because bitcoin won't die]({{site.baseurl}}/_posts/frustratedGrimReaper.png)
+![frustrated grim reaper because bitcoin won't die]({{site.baseurl}}images/frustratedGrimReaper.png)
 
 ---
 
