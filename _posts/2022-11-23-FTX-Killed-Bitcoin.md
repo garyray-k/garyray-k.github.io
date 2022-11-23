@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 **DISCLAIMER: THE AUTHOR OF THIS ARTICLE IS A TOXIC BITCOIN MAXIMALIST, IF YOU DO NOT LIKE THAT, I SUGGEST YOU READ [THIS ARTICLE](https://dergigi.com/2022/11/19/dear-crypto-fiat-bros/) INSTEAD.**
 
