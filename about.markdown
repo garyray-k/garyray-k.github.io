@@ -5,3 +5,5 @@ permalink: /about/
 published: true
 ---
 Under construction...
+
+Buy Bitcoin. Not financial advise.
