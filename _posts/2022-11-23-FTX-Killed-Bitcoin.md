@@ -17,7 +17,7 @@ The story seemingly started a while back, but the trigger for the fallout could 
 
 Just kidding. Bitcoin didn't die, again.
 
-Bitcoin has been [pronounced dead over 400 times](https://99bitcoins.com/bitcoin-obituaries/) but still holds the highest market cap of and digital crypto asset with the widest adoption and usage. The rest of this article will begin to outline the difference between Bitcoin and crypto but is far from a complete guide.
+Bitcoin has been [pronounced dead over 400 times](https://99bitcoins.com/bitcoin-obituaries/) but still holds the highest market cap of any digital crypto asset with the widest adoption and usage. The rest of this article will begin to outline the difference between Bitcoin and crypto but is far from a complete guide.
 
 To start, one of the biggest differences is the lack of central identity or control for Bitcoin. There is no Bitcoin CEO or Bitcoin marketing team. There are just thousands, maybe millions, of individuals voluntarily participating in the network. There is no one for Congress to call to a session to question about Bitcoin. There is no regulatory body that can crack down on Bitcoin. The State can only attack Bitcoin-related companies and entities, which unfortunately happens in many countries around the world. For instance, in 2021, China banned crypto and Bitcoin. This took their geographic location from being number 2 in the world for mining power to 0. China is again one of the top regions for Bitcoin mining by hash power. This censorship resistance is a feature of Bitcoin that many in the Western world have a hard time appreciating.
 
