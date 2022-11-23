@@ -34,3 +34,5 @@ Don't trust, verify.
 Thank you for reading.
 
 For more mediocre takes on Bitcoin and other topics, feel free to follow me on Twitter [@garyKrause_](https://twitter.com/garyKrause_).
+
+This post was originally publsihed in a newsletter from the [Libertarian Party of Northern Virginia](lpnova.org) and can be found in it's original (poorly spelled before Grammarly form) [here](https://mcusercontent.com/b8a3e1fbc6c6842725c46ff44/files/75087144-2aa6-861c-d48b-14cfc165da3e/FTX_WTF_.pdf?mc_cid=ef697bb8bd).
