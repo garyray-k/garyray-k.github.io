@@ -5,7 +5,7 @@ permalink: /about/
 published: true
 ---
 
-Under construction... but for my resume you can [get the PDF]({{ site.url }}/assets/GaryKrauseResume-Engineer.pdf)
+Under construction... but for my resume you can [get the PDF here.]({{ site.url }}/assets/GaryKrauseResume-Engineer.pdf)
 
 I run [Shenadoah Bitcoin Club](https://shenadoahbitcoin.club). You should stop by sometime.
 
