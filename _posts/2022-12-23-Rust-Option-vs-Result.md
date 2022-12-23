@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 From the [Result module docs](https://doc.rust-lang.org/std/result/index.html).
 
