@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 ## What happens when you can pay for electricity in sats?
 
