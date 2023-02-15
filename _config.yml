@@ -33,6 +33,11 @@ twitch_username: garykrause_
 theme: minima
 plugins:
   - jekyll-feed
+defaults:
+- scope:
+    path: ".well-known/"
+  values:
+    image: true
 minima:
   skin: dark
   date_format: "%Y%m%d"
