@@ -1,9 +1,9 @@
 {
   "names": {
-    "satoshi": "npub160t5zfxalddaccdc7xx30sentwa5lrr3rq4rtm38x99ynf8t0vwsvzyjc9"
+    "satoshi": "d3d74124ddfb5bdc61b8f18d17c3335bbb4f8c71182a35ee27314a49a4eb7b1d"
   },
   "relays": {
-    "npub160t5zfxalddaccdc7xx30sentwa5lrr3rq4rtm38x99ynf8t0vwsvzyjc9": [
+    "d3d74124ddfb5bdc61b8f18d17c3335bbb4f8c71182a35ee27314a49a4eb7b1d": [
       "wss://relay.damus.io",
       "wss://relay.snort.social",
       "wss://nostr.orangepill.dev",
